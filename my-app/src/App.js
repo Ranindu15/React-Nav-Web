@@ -6,6 +6,7 @@ import {Contact} from './Contact';
 import {Gallery} from './Gallery';
 import {NoMatch} from './NoMatch';
 import {NavBar} from './components/NavBar';
+import {Jumbotron} from './components/Jumbotron';
 
 
 class  App extends Component {
@@ -13,15 +14,16 @@ class  App extends Component {
     return (
       <React.Fragment>
       <NavBar/>
-        <Router>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/gallery" component={Gallery} />
-            <Route component={NoMatch} />
-          </Switch>
-        </Router>
+        <Jumbotron/>
+          <Router>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/about" component={About} />
+              <Route path="/contact" component={Contact} />
+              <Route path="/gallery" component={Gallery} />
+              <Route component={NoMatch} />
+            </Switch>
+          </Router>
 
 
       </React.Fragment>
